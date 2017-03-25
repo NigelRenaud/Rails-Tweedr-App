@@ -1,0 +1,13 @@
+<h3> Recent Shouts </h3>
+<div class="shouts">
+    <% @shouts.each do |shout| %>
+        <div class="shout">
+            <p>
+                <%= shout.content %>
+                <span class="created-at">
+                    - <%= shout.created_at.strftime("%b %d %I:%M") %>
+                </span>
+            </p>
+        </div>
+    <% end %>
+</div>

@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: "shouts#index"
+  get "/shouts", to: "shouts#index", as: :shouts
+  get "/shouts/new", to: "shouts#new", as: :new_shout
+  post "/shouts", to: "shouts#create", as: :create_shout
+
 end
