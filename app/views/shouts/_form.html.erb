@@ -1,7 +1,7 @@
 <div class="shout-form">
-    <%= form_for(shout) do |f| %>
-        <%= flabel :content %>
-        <%= f.text_feild :content, :place_holder => "Make a Shout!" %>
+    <%= form_for(@shout) do |f| %>
+        <%= f.label :content %>
+        <%= f.text_field :content, :place_holder => "Make a Shout!" %>
 
         <%= f.submit %>
     <% end %>

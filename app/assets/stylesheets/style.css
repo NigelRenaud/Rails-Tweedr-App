@@ -17,7 +17,7 @@ h3 {
 
 div.flash {
     background-color: antiquewhite;
-    display: none;
+   /* display: none;*/
     max-width: 500px;
     margin: 0 auto;
 }

@@ -1,3 +1,3 @@
-class shout < AppplicationRecord
-    validate :content, :presence: true
+class Shout < ApplicationRecord
+    validates :content, presence: true
 end

@@ -1,15 +1,15 @@
 class ShoutsController < ApplicationController
-    def inde
+    def index
         @shouts = Shout.all.order(created_at: :desc)
-        @shut = Shout.new
+        @shout = Shout.new
     end
-    end
+
     def create
         @shout = Shout.new(shout_params)
         if @shout.save
             flash[:notice] = "Shout created successfully!"
             redirect_to shouts_path
-        else 
+        else
             flash[:alert] = "Content can't be blank"
             redirect_to shouts_path
         end
@@ -18,5 +18,6 @@ class ShoutsController < ApplicationController
     private
 
     def shout_params
-        params.require(:shout).permit(:contents)
+        params.require(:shout).permit(:content)
     end
+end
